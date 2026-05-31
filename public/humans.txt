@@ -8,6 +8,6 @@ Platform URL: https://molten.bot
 /* SITE */
 
 Name: Cordia App Template
-Description: Static browser-only web application template ready for Cloudflare Pages.
+Description: Static browser-only web application template ready for static hosting.
 Language: English
 Standards: HTML, CSS, JavaScript

@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 import {
@@ -62,4 +63,18 @@ test("item reducers add, update, remove, and clear items immutably", () => {
     cleared.items,
     [{ id: "three", text: "Three", done: false }],
   );
+});
+
+test("served files do not reference disallowed providers or tooling", async () => {
+  const servedFiles = [
+    "public/app.js",
+    "public/humans.txt",
+    "public/index.html",
+    "public/llm.txt",
+  ];
+
+  for (const file of servedFiles) {
+    const content = await readFile(file, "utf8");
+    assert.doesNotMatch(content, /\bgit\b|cloudflare/i, file);
+  }
 });

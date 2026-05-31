@@ -50,7 +50,7 @@ export function createDefaultState(idFactory: () => string = () => crypto.random
     items: [
       createItem("Replace starter content", false, idFactory),
       createItem("Add app-specific data model", false, idFactory),
-      createItem("Deploy public folder to Cloudflare Pages", true, idFactory),
+      createItem("Publish public folder to your hosting provider", true, idFactory),
     ],
   };
 }

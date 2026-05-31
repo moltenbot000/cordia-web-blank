@@ -1,6 +1,6 @@
 # Cordia App Template
 
-Cordia App Template is a static browser-only web application template ready for Cloudflare Pages.
+Cordia App Template is a static browser-only web application template ready for static hosting.
 
 Creator: cordia.molten.bot
 Creator URL: https://cordia.molten.bot
